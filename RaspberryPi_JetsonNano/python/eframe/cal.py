@@ -5,15 +5,21 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from datetime import datetime, timedelta
+import time
 
 class Event():
     def __init__(self, summary, start_datetime):
         self.summary = summary
         self.start_datetime = start_datetime
 
+    def __eq__(self, other):
+        summary = self.summary == other.summary
+        date = self.start_datetime == other.start_datetime
+        return (summary or date)
 
 
-def getGoogleCalendar():
+
+def getGoogleCalendarJson(token):
     if(not os.path.exists("token.pkl")):
         exit()
 
@@ -39,7 +45,7 @@ def getGoogleCalendar():
 
     return comming_events
 
-def getCommingEventsList(calender_json):
+def jsonToEventList(calender_json):
     events = []
     for event in calender_json:        
         summary = event['summary']
@@ -53,3 +59,8 @@ def getCommingEventsList(calender_json):
         thisEvent = Event(summary, start_date)
         events.append(thisEvent)
     return events
+
+def getEventList(token):
+    cal_json = getGoogleCalendarJson(token)
+    events_list = jsonToEventList(cal_json)
+    return events_list
