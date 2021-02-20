@@ -1,0 +1,26 @@
+{'kind': 'calendar#event', 'etag': '"3197074398066000"', 'id': '6srm6d9n74qjeb9i61gm2b9kccr38bb161j6ab9mc4qm4c9m64r34e9jc4_20210225', 'status': 'confirmed', 'htmlLink': 'https: //www.google.com/calendar/event?eid=NnNybTZkOW43NHFqZWI5aTYxZ20yYjlrY2NyMzhiYjE2MWo2YWI5bWM0cW00YzltNjRyMzRlOWpjNF8yMDIxMDIyNSBnYWFzZW5rQG0', 'created': '2020-08-27T14:06:39.000Z', 'updated': '2020-08-27T14:06:39.033Z', 'summary': 'Farmor fødselsdag', 'colorId': '5', 'creator': {'email': 'gaasenk@gmail.com', 'self': True},
+    'organizer': {'email': 'gaasenk@gmail.com', 'self': True
+    }, 'start': {'date': '2021-02-25'
+    }, 'end': {'date': '2021-02-26'
+    }, 'recurringEventId': '6srm6d9n74qjeb9i61gm2b9kccr38bb161j6ab9mc4qm4c9m64r34e9jc4', 'originalStartTime': {'date': '2021-02-25'
+    }, 'transparency': 'transparent', 'iCalUID': '6srm6d9n74qjeb9i61gm2b9kccr38bb161j6ab9mc4qm4c9m64r34e9jc4@google.com', 'sequence': 0, 'reminders': {'useDefault': False, 'overrides': [
+            {'method': 'popup', 'minutes': 990
+            },
+            {'method': 'popup', 'minutes': 180
+            }
+        ]
+    }, 'eventType': 'default'
+}
+INFO: root: {'kind': 'calendar#event',
+ 'etag': '"3226110621574000"',
+  'id': 'cooj2db6clh30b9lcdi30b9kccom6bb268q3cbb3cco38p9mc8om6cho6c',
+   'status': 'confirmed', 
+   'htmlLink': 
+   'https: //www.google.com/calendar/event?eid=Y29vajJkYjZjbGgzMGI5bGNkaTMwYjlrY2NvbTZiYjI2OHEzY2JiM2NjbzM4cDltYzhvbTZjaG82YyBnYWFzZW5rQG0', 
+   'created': '2021-02-11T14:55:10.000Z', 
+   'updated': '2021-02-11T14:55:10.787Z', 
+   'summary': 'Tandlæge', 
+   'creator': {'email': 'gaasenk@gmail.com', 'self': True}, 
+   'organizer': {'email': 'gaasenk@gmail.com', 'self': True}, 
+   'start': {'dateTime': '2021-02-25T08:15:00+01:00', 'timeZone': 'Europe/Copenhagen'}, 
+   'end': {'dateTime': '2021-02-25T08:45:00+01:00', 'timeZone': 'Europe/Copenhagen'}, 'iCalUID': 'cooj2db6clh30b9lcdi30b9kccom6bb268q3cbb3cco38p9mc8om6cho6c@google.com', 'sequence': 0, 'reminders': {'useDefault': True}, 'eventType': 'default'}
