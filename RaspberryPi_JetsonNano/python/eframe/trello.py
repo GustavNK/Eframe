@@ -9,8 +9,6 @@ class TrelloCard():
         return self.name == other.name
 
 
-
-
 def getTrelloCards():
     list_id = '5de4f37bfc5a3c403cfd5167' #todo list
     trello_url = "https://api.trello.com/1/lists/" + list_id + "/cards"
@@ -37,9 +35,6 @@ def getTrelloCards():
         todo_cards_name.append(thisCard)
 
     return todo_cards_name
-
-
-
 
 def splitName(card):
     string = list(card.name)

@@ -3,15 +3,12 @@
 
 # TODO
 # - Update when things change online
-
 import sys
 import os
 import logging
-from datetime import datetime, timedelta
 import time
 import traceback
 from PIL import Image,ImageDraw,ImageFont
-picdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pic')
 libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
 if os.path.exists(libdir):
     sys.path.append(libdir)
@@ -65,7 +62,6 @@ try:
             old_cards_list = cards_list
 
         time.sleep(MIN_5)
-
 
     if(False):
         epd.Clear()
