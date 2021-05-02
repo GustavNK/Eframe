@@ -6,6 +6,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from datetime import datetime, timedelta
 import time
+import logging
 
 class Event():
     def __init__(self, summary, start_datetime):
@@ -16,8 +17,6 @@ class Event():
         summary = self.summary == other.summary
         date = self.start_datetime == other.start_datetime
         return (summary or date)
-
-
 
 def getGoogleCalendarJson(token):
     if(not os.path.exists("token.pkl")):
@@ -37,8 +36,10 @@ def getGoogleCalendarJson(token):
     later = datetime.utcnow() + timedelta(days=60)
     later = later.replace(tzinfo=pytz.UTC).isoformat()
 
+    logging.debug("GET service.events.list comming")
     result = service.events().list(calendarId=main_cal_id, timeMin=today, timeMax=later, showDeleted=False, singleEvents=True, orderBy="startTime").execute()
-
+    logging.debug("DONE service.events.list comming")
+    
     comming_events = []
     for event in result['items']:
         comming_events.append(event)

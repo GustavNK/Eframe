@@ -28,7 +28,7 @@ try:
     # Setup
     logging.info("Setting up")
 
-    logging.info("init and Clear")
+    logging.info("Init and Clear")
     epd = epd4in2.EPD()
     epd.init()
     epd.Clear()
@@ -42,18 +42,23 @@ try:
     logging.info("Getting initial Calendar")
     events_list = cal.getEventList(token)
     
+    logging.info("Drawing Eframe")
     sketcher.drawEframe(events_list, cards_list, draw)
     epd.display(epd.getbuffer(Himage))
 
     old_cards_list = cards_list
     old_events_list = events_list
     
+    
     while(True):
+        logging.info("Getting new Trello Cards")
         cards_list = trello.getTrelloCards()
+
+        logging.info("Getting new Calendar")
         events_list = cal.getEventList(token) 
 
         if (old_cards_list != cards_list or old_events_list != events_list):
-            logging.info("---Drawing new board")
+            logging.info("---Drawing new Eframe")
             epd.Clear()
             sketcher.drawEframe(events_list, cards_list, draw)
             epd.display(epd.getbuffer(Himage))
