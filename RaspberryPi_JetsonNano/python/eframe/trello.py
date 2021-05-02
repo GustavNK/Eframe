@@ -44,7 +44,7 @@ def splitName(card):
             space_break = n
             break
     string = []
-    string.append(card.name[0:space_break])
-    string.append(card.name[space_break+1:space_break+20])
+    string.append(card.name[0:space_break] + " ")
+    string.append(card.name[space_break+1:space_break+30])
 
     return string

@@ -49,7 +49,6 @@ try:
     old_cards_list = cards_list
     old_events_list = events_list
     
-    
     while(True):
         logging.info("Getting new Trello Cards")
         cards_list = trello.getTrelloCards()
@@ -66,6 +65,7 @@ try:
             old_events_list = events_list
             old_cards_list = cards_list
 
+        logging.info("Waitng 5 min to update")
         time.sleep(MIN_5)
 
     if(False):
