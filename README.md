@@ -94,7 +94,7 @@ Group=root
 
 [Service]
 # Python3 eframe.py
-ExecStart=/usr/bin/python3 /home/pi/Eframe/RaspberryPi_JetsonNano/python/eframe/eframe.py 
+ExecStart=/usr/bin/python3 /home/pi/Eframe/eframe/eframe.py 
 
 [Install]
 ```

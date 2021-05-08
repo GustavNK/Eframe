@@ -19,7 +19,7 @@ class Event():
         return (summary or date)
 
 def getGoogleCalendarJson(token):
-    token_location = "/home/pi/Eframe/RaspberryPi_JetsonNano/python/eframe/token.pkl"
+    token_location = "/home/pi/Eframe/eframe/token.pkl"
 
     if(not os.path.exists(token_location)):
         logging.info("token.pkl is not found. Exiting")
