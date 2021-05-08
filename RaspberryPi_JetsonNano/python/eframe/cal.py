@@ -19,10 +19,13 @@ class Event():
         return (summary or date)
 
 def getGoogleCalendarJson(token):
-    if(not os.path.exists("token.pkl")):
+    token_location = "/home/pi/Eframe/RaspberryPi_JetsonNano/python/eframe/token.pkl"
+
+    if(not os.path.exists(token_location)):
+        logging.info("token.pkl is not found. Exiting")
         exit()
 
-    credentials = pickle.load(open("token.pkl", "rb"))
+    credentials = pickle.load(open(token_location, "rb"))
 
     service = build("calendar", "v3", credentials=credentials)
 
