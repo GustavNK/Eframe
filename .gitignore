@@ -1,3 +1,6 @@
 client_secret.json
-token.pkl
+token.json
 MY_README.md
+.idea/*
+*.pyc
+*.pkl
