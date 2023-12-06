@@ -1,0 +1,11 @@
+README.md
+setup.py
+lib/waveshare_epd/__init__.py
+lib/waveshare_epd/epd4in2.py
+lib/waveshare_epd/epd4in2b_V2.py
+lib/waveshare_epd/epd4in2bc.py
+lib/waveshare_epd/epdconfig.py
+lib/waveshare_epd.egg-info/PKG-INFO
+lib/waveshare_epd.egg-info/SOURCES.txt
+lib/waveshare_epd.egg-info/dependency_links.txt
+lib/waveshare_epd.egg-info/top_level.txt
