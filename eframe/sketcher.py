@@ -9,7 +9,7 @@ if os.path.exists(libdir):
 import trello
 
 weekday = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"]
-today = datetime.now().strftime("%Y-%m-%d")
+today = datetime.now().strftime("%d-%m-%Y")
 today_weekday = weekday[int(datetime.now().strftime("%w"))]
 
 

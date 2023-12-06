@@ -58,7 +58,12 @@ try:
 
         if (old_cards_list != cards_list or old_events_list != events_list):
             logging.info("---Drawing new Eframe")
+            
             epd.Clear()
+            
+            Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
+            draw = ImageDraw.Draw(Himage)
+            
             sketcher.drawEframe(events_list, cards_list, draw)
             epd.display(epd.getbuffer(Himage))
 
